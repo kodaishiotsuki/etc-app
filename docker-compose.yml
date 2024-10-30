@@ -1,13 +1,13 @@
 services:
-  client:
+  frontend:
     build:
-      context: client
+      context: frontend
     ports:
       - "3000:3000"
     volumes:
-      - ./client:/app
-      - ./client/public:/app/public
-      - ./client/package.json:/app/package.json
+      - ./frontend:/app
+      - ./frontend/public:/app/public
+      - ./frontend/package.json:/app/package.json
       - /app/node_modules
 
   backend:
